@@ -13,7 +13,7 @@
 	<version>1.0-SNAPSHOT</version>
 
 	<properties>
-		<org.apache.struts_version>2.2.1.1</org.apache.struts_version>
+		<org.apache.struts_version>2.2.3</org.apache.struts_version>
 		<org.springframework_spring_version>3.1.0.M2</org.springframework_spring_version>
 		<org.hibernate.hibernate_version>3.6.5.Final</org.hibernate.hibernate_version>
 		<mysql-connector-java.version>5.1.14</mysql-connector-java.version>
@@ -24,6 +24,7 @@
 		<junit.version>4.8.2</junit.version>
 		<logback.version>0.9.26</logback.version>
 		<com.hazelcast_version>1.9.3.1</com.hazelcast_version>
+		<org.aspectj.aspectj_version>1.6.2</org.aspectj.aspectj_version>
 
 		<de.jeha.db.host>127.0.0.1</de.jeha.db.host>
 	</properties>
@@ -67,6 +68,11 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-tx</artifactId>
+			<version>${org.springframework_spring_version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
 			<version>${org.springframework_spring_version}</version>
 		</dependency>
 		<dependency>
@@ -114,6 +120,11 @@
 			<groupId>commons-lang</groupId>
 			<artifactId>commons-lang</artifactId>
 			<version>2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.perf4j</groupId>
+			<artifactId>perf4j</artifactId>
+			<version>0.9.14</version>
 		</dependency>
 
 		<dependency>
