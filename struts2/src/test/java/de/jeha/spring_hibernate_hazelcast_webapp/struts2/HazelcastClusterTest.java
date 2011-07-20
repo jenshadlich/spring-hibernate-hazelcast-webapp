@@ -1,6 +1,7 @@
 package de.jeha.spring_hibernate_hazelcast_webapp.struts2;
 
 import java.util.Map;
+import java.util.Random;
 
 import javax.annotation.Resource;
 
@@ -27,15 +28,23 @@ public class HazelcastClusterTest {
 
 	@Test
 	public void foobar() {
+		final int elemCount = 100 * 1000;
+		final Random generator = new Random();
 		StopWatch stopWatch = new LoggingStopWatch();
 
 		Map<String, String> map = Hazelcast.getMap("values");
 
-		for (int i = 0; i < 1 * 1000; i++) {
+		for (int i = 0; i < elemCount; i++) {
 			map.put(Integer.toString(i), "value" + i);
 		}
+		stopWatch.stop("done putting 100.000 elements into a map");
 
-		stopWatch.stop("done");
+		stopWatch.start();
+		for (int i = 0; i < elemCount; i++) {
+			int idx = generator.nextInt(elemCount) + 1;
+			map.get(Integer.toString(idx));
+		}
+		stopWatch.stop("done retrieving 100.000 random elements from a map");
 	}
 
 	@Ignore
