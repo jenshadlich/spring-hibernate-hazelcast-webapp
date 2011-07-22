@@ -17,7 +17,7 @@
 		<org.springframework_spring_version>3.1.0.M2</org.springframework_spring_version>
 		<org.hibernate.hibernate_version>3.6.5.Final</org.hibernate.hibernate_version>
 		<mysql-connector-java.version>5.1.14</mysql-connector-java.version>
-		<org.hibernate-validator.version>4.1.0.Final</org.hibernate-validator.version>
+		<org.hibernate-validator.version>4.2.0.Final</org.hibernate-validator.version>
 		<javax.persistence-hibernate-jpa-2.0-api.version>1.0.0.Final</javax.persistence-hibernate-jpa-2.0-api.version>
 		<org.hibernate-jpamodelgen.version>1.0.0.Final</org.hibernate-jpamodelgen.version>
 		<org.slf4j_version>1.6.1</org.slf4j_version>
