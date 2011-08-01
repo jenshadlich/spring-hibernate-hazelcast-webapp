@@ -14,6 +14,12 @@ import dynaspring.Configuration;
 import dynaspring.LispBeanDefinitionReader;
 import dynaspring.LispBeanFactory;
 
+/**
+ * TODO: make this thing work
+ * 
+ * @author jeha
+ *
+ */
 public class DynaspringTestContextLoader extends DefaultResourceLoader
 		implements ContextLoader {
 

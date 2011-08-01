@@ -12,6 +12,8 @@ public class DynaspringJUnit4ClassRunner extends SpringJUnit4ClassRunner {
 
 	@Override
 	protected String getDefaultContextLoaderClassName(Class<?> clazz) {
-		return DynaspringTestContextLoader.class.getCanonicalName();
+		//return DynaspringTestContextLoader.class.getCanonicalName();
+		// TODO: make the context loader work; for now just work as the normal SpringJUnit4ClassRunner
+		return null;
 	}
 }
