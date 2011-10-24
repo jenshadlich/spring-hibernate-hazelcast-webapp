@@ -14,7 +14,8 @@
 
 	<properties>
 		<org.apache.struts_version>2.2.3</org.apache.struts_version>
-		<org.springframework_spring_version>3.1.0.M2</org.springframework_spring_version>
+		<org.springframework_spring_version>3.0.6.RELEASE</org.springframework_spring_version>
+		<org.springframework_spring_security_version>3.0.6.RELEASE</org.springframework_spring_security_version>
 		<org.hibernate.hibernate_version>3.6.5.Final</org.hibernate.hibernate_version>
 		<mysql-connector-java.version>5.1.14</mysql-connector-java.version>
 		<org.hibernate-validator.version>4.2.0.Final</org.hibernate-validator.version>
@@ -74,6 +75,21 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aop</artifactId>
 			<version>${org.springframework_spring_version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${org.springframework_spring_security_version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>${org.springframework_spring_security_version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${org.springframework_spring_security_version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.hibernate</groupId>
