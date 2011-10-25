@@ -3,6 +3,7 @@ package de.jeha.spring_hibernate_hazelcast_webapp.struts2;
 import javax.annotation.Resource;
 
 import org.junit.Test;
+import org.junit.Ignore;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -15,7 +16,8 @@ public class SelfInjectionTest {
 	@Resource(name = "testBean")
 	private SelfInjectingBean testBean;
 
-	@Test
+	@Ignore("FOOBAR FOOBAR")
+    @Test
 	@Transactional
 	public void foobar() {
 		testBean.foo("call from outside");
