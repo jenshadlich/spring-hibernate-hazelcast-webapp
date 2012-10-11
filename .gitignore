@@ -5,3 +5,5 @@
 /struts2/.classpath
 /.settings
 /.project
+/spring-hibernate-hazelcast-webapp.iml
+/struts2/spring-hibernate-hazelcast-webapp.struts2.iml
