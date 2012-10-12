@@ -11,16 +11,10 @@
     http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd">
 
 	<context:annotation-config />
-	<context:component-scan base-package="de.jeha.spring_hibernate_hazelcast_webapp.struts2.bl" />
+	<context:component-scan
+		base-package="de.jeha.spring_hibernate_hazelcast_webapp.struts2.copyAspect" />
 
-	<jdbc:embedded-database id="dataSource" type="H2" />
-
-	<bean id="entityManagerFactory"
-		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
-		p:dataSource-ref="dataSource" p:persistenceXmlLocation="META-INF/persistence.xml" />
-
-	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager"
-		p:entityManagerFactory-ref="entityManagerFactory" />
+	<aop:aspectj-autoproxy />
 
 </beans>
 

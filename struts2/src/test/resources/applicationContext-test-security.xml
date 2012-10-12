@@ -16,9 +16,9 @@
 	<context:component-scan
 		base-package="de.jeha.spring_hibernate_hazelcast_webapp.struts2.security" />
 
+	<!-- access-decision-manager-ref="accessDecisionManager" -->
 	<sec:global-method-security
-		secured-annotations="enabled" pre-post-annotations="enabled"
-		access-decision-manager-ref="accessDecisionManager">
+		secured-annotations="enabled" pre-post-annotations="enabled">
 		<!-- <sec:protect-pointcut expression="execution(* de.jeha.spring_hibernate_hazelcast_webapp.struts2.security.*.*(..))" 
 			access="ROLE_GUEST" /> -->
 	</sec:global-method-security>
@@ -49,14 +49,12 @@
 		<property name="decisionVoters">
 			<list>
 				<ref bean="roleVoter" />
-				<ref bean="webExpressionVoter" />
+				<ref bean="authenticatedVoter" />
 			</list>
 		</property>
 	</bean>
 	<bean id="authenticatedVoter"
 		class="org.springframework.security.access.vote.AuthenticatedVoter" />
 
-	<bean id="webExpressionVoter"
-		class="org.springframework.security.web.access.expression.WebExpressionVoter" />
 </beans>
 
